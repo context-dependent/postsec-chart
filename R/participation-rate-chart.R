@@ -71,6 +71,8 @@ plot <- dplt %>%
   geom_line(aes(color = pse_sex), lwd = 1)  + 
   
   # chart aesthetics
+  # if missing package bptheme, run remotes::install_github("context-dependent/bptheme")
+  # if not on the dev version of ggplot2, run remotes::install_github("tidyverse/ggplot2")
   bptheme::theme_blueprint() + 
   scale_x_continuous(limits = c(1990, 2018), breaks = c(1990, 1995, 2000, 2005, 2010, 2015, 2018)) + 
   scale_y_continuous(limits = c(0, 100), expand = c(0, 0)) + 
